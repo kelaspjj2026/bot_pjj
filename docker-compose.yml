@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    container_name: wa_bot_pjj
+    restart: always
+    stop_grace_period: 45s
+    ports:
+      - "3002:3001"
+    environment:
+      - PORT=3001
+      - BASE_PATH=/bot
+      - MONGO_URI=mongodb://mongo:27017/helpdesk_bot
+      - GAS_WEBHOOK_URL=${GAS_WEBHOOK_URL}
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./sessions:/app/sessions
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: wa_bot_db
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

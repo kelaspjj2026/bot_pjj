@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - Bot WhatsApp PJJ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>🤖 Bot PJJ</h3>
+        <span class="sidebar-subtitle">Informatika Udinus</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-page="matkul">
+          <span class="nav-icon">📚</span> Mata Kuliah
+        </a>
+        <a href="#" class="nav-item" data-page="jadwal">
+          <span class="nav-icon">📅</span> Jadwal Kuliah
+        </a>
+        <a href="#" class="nav-item" data-page="pengumuman">
+          <span class="nav-icon">📢</span> Pengumuman
+        </a>
+        <a href="#" class="nav-item" data-page="tugas">
+          <span class="nav-icon">📝</span> Tugas & Deadline
+        </a>
+        <a href="#" class="nav-item" data-page="mahasiswa">
+          <span class="nav-icon">👥</span> Mahasiswa
+        </a>
+        <a href="#" class="nav-item" data-page="titip-absen">
+          <span class="nav-icon">📋</span> Titip Absen
+        </a>
+        <a href="#" class="nav-item" data-page="rangkuman">
+          <span class="nav-icon">📋</span> Rangkuman
+        </a>
+        <a href="#" class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙️</span> Pengaturan
+        </a>
+        <a href="#" class="nav-item" id="btnLogout">
+          <span class="nav-icon">🚪</span> Logout
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="wa-status" id="waStatus">
+          <span class="status-dot disconnected"></span> <span id="waStatusText">Offline</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <h1 id="pageTitle">Dashboard</h1>
+      </header>
+      <div class="content-area" id="contentArea">
+        <!-- Dynamic content loads here -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/bot/socket.io/socket.io.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/socket.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

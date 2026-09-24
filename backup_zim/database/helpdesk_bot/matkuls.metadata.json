@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"kode":{"$numberInt":"1"}},"name":"kode_1","background":true,"unique":true}],"uuid":"decd1c10a7164ace80d353a3968b9feb","collectionName":"matkuls","type":"collection"}

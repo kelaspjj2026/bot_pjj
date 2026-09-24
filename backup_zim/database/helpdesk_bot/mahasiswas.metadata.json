@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"nim":{"$numberInt":"1"}},"name":"nim_1","background":true,"unique":true}],"uuid":"22efafe04321477f98bda85f393374cc","collectionName":"mahasiswas","type":"collection"}
