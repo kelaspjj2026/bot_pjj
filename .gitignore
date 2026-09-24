@@ -39,8 +39,12 @@ build/
 *.h5
 *.sqlite3
 data/
-models/
 checkpoints/
+
+# === Runtime data ===
+sessions/
+uploads/
+*.log
 
 # === Misc ===
 *.tmp

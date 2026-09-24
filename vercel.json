@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "backend/frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/bot/socket.io/(.*)",
+      "dest": "backend/server.js"
+    },
+    {
+      "src": "/bot/api/(.*)",
+      "dest": "backend/server.js"
+    },
+    {
+      "src": "/bot/(.*)",
+      "dest": "backend/frontend/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "backend/server.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "@mongo-uri",
+    "BASE_PATH": "/bot",
+    "TZ": "Asia/Jakarta"
+  }
+}
